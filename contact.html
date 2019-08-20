@@ -1,42 +1,32 @@
 ---
 title: Contact
-heading: Get in touch today
-description: We'd love to help you improve your sales.
+heading: Feel free to contact us
+description: 
 
 map:
-  latitude: -45.8787605
-  longitude: 170.5027976
-  address: "1 George Street, Dunedin, New Zealand"
+  latitude: 32.880749
+  longitude: -117.240250
+  address: "9500 Gilman Dr, La Jolla, CA 92093"
   zoom: 13
 ---
-<div class="map" id="map"></div>
 
 
 <div class="contact-box">
-	<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
-		<input type="hidden" name="_to" value="support@example.com" />
-		<input type="text" name="_gotcha" style="display: none;">
-
-		<label for="name">Full Name</label>
-		<input type="text" name="name" id="name" placeholder="Enter your name..." />
-
-		<label for="email">Email Address</label>
-		<input type="email" name="email" id="email" placeholder="Enter your email..." required />
-
-		<label for="message">Message</label>
-		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
-
-		<input type="submit" value="Send Message" />
-	</form>
-
 	<div class="contact-details">
+		<p> Prof. Virginia de Sa</p>
 		<h3 class="editable">Address</h3>
-		<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
-
+		<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", " }}</a></address>
+		<h3 class="editable">Phone</h3>
+		<p>(858)-822-5095</p>
+		<h3 class="editable">Fax</h3>
+		<p>(858)-534-1128</p>
 		<h3 class="editable">Email</h3>
-		<p><a href="mailto:support@example.com">support@example.com</a></p>
+		<p>lastname_at_cogsci.ucsd.edu</p>
+
 	</div>
 </div>
+
+<div class="map" id="map"></div>
 
 <script type="text/javascript">
 	window.mapData = {{ page.map | jsonify }};
@@ -175,4 +165,4 @@ map:
 		});
 	}
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1t0l6rKws4hKcthMa-P0m2Pj7dUBYMxY&amp;callback=initMap"></script>
