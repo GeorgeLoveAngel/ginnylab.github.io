@@ -1,0 +1,130 @@
+---
+title: Our team
+description: Staff
+---
+<p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_staff_members/" class="btn"><strong>&#9998;</strong> Manage Staff members</a></p>
+<ul class="staff">
+	{% for person in site.staff_members %}
+		{% if person.position == "staff" %}
+		<li>
+			<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}" alt="{{ person.name }}"/></div>
+			<div class="name"><a target="_blank" href="https://twitter.com/{{ person.twitter }}">{{ person.name }}</a></div>
+			<!-- <div class="position">{{ person.position }}</div> -->
+		</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+<p  style="text-align: center;"> PhD students</p>
+<ul class="staff">
+	{% for person in site.staff_members %}
+		{% if person.position == "phd" %}
+		<li>
+			<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}" alt="{{ person.name }}"/></div>
+			<div class="name">		
+					<a target="_self" href={{ person.homepage }}>{{ person.name }}</a>
+			</div>
+			<div class="position">{{ person.award }}</div>
+		</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+<p  style="text-align: center;"> Master students</p>
+<ul class="staff">
+	{% for person in site.staff_members %}
+		{% if person.position == "master" %}
+		<li>
+			<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}" alt="{{ person.name }}"/></div>
+			<div class="name"><a target="_blank" href={{ person.homepage }}>{{ person.name }}</a></div>
+		</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+
+<div class="contact-box">
+		<div class="contact-details">
+			<p>
+				Sriram Ravindran M.S. 2018 now at Adobe
+			</p>
+			<br />
+			<p>
+				Patrick Gallagher (NSF fellowship, NSF IGERT trainee) PhD 2015 now Data Scientist at SparkBeyond
+			</p>
+			<br />
+			<p>
+				Adam Koerner (NSF IGERT trainee, INC fellowhip) PhD 2013 now Director of Analytics at Kabam 
+			</p>
+			<br />
+			<p>
+				Josh Lewis (NSF IGERT trainee) PhD 2011 now Vice President Alpine Data Labs
+			</p>
+			<br />
+			<p>
+				Vicente Malave (NSF IGERT trainee, San Diego Fellowship)
+			</p>
+			<br />
+			<p>
+				Tim Mullen (with Scott Makeig) (San Diego Fellowship, Glushko award, Chancellor's Dissertation Medal) PhD 2015 now CEO/ Research Director, Intheon Labs
+			</p>
+			<br />
+			<p>
+				Eunho Noh (Kavli Innovative Research Award (2012-2013), Qualcomm Innovation Fellowship finalist (2012)) PhD 2014 now Bioinformatics Scientist at Illumina
+			</p>
+			<br />
+			<p>
+				Walter Talbott (with Javier Movellan) (NSF IGERT trainee, Qualcomm Innovation Fellowship finalist) PhD 2015
+			</p>
+			<br />
+			<p>
+				Leo Trottier (NSERC fellowship) now Founder and CEO CleverPet
+			</p>
+			<br />
+			<p>
+				Priya Velu (MD/PhD 2014) now Resident Pathologist at U Penn
+			</p>
+			<br />
+			<p>
+				Alan Robinson (Ph.D. 2009) now postdoc UCSD (Psych and CogSci)
+			</p>
+			<br />
+			<p>
+				Hsin-Hao Yu (with Marty Sereno) (Ph.D. 2007) now research fellow at Monash University
+			</p>
+			<br />
+			<p>
+				Paul Hammon NSF IGERT trainee (Ph.D. 2009) now Senior Data Scientist Renovate America
+			</p>
+			<br />
+			<p>
+				Jesse Cirimele (graduated 07) PhD Stanford CS now at Osmo (Tangible Play, Inc)
+			</p>
+			<br />
+			<p>
+				Mitch Datlow (graduated 06), MS John Hopkins, MD UC Davis, now Resident Physician and DRD consulting
+			</p>
+			<br />
+			<p>
+				Robert Morgan (graduated 03) MD/PhD UC Irvine now Psychiatrist at the Mayo Clinic
+			</p>
+			<br />
+			<p>
+				John Rieman (graduated 03) MS in Aerospace Engineering
+			</p>
+			<br />
+			<p>
+				Sophie Soong (now Hsu) (graduated 06) Berkeley Optometry now Optometrist
+			</p>
+			<br />
+			<p>
+				Tom Sullivan NSF IGERT trainee, INC fellowship (Ph.D. 2006) now Lead Snsor System Architect at Apple
+			</p>
+			<br />
+			<p>
+				Josh Susskind (graduated 03) PhD University of Toronto now at Apple
+			</p>
+			<br />
+			<p>
+				Qiong Zhang (undergrad National University of Singapore) now PhD student at CMU
+			</p>
+			<br />
+		</div>
+	</div>
