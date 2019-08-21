@@ -2,7 +2,7 @@
 # Site
 
 title: de Sa Lab
-url: "https://ginnylab.github.io"
+url: "/Users/wuzhengyu/Desktop/ginnylab.github.io" #"https://ginnylab.github.io"
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key: AIzaSyC1t0l6rKws4hKcthMa-P0m2Pj7dUBYMxY
@@ -48,6 +48,15 @@ defaults:
     scope:
       path: ""
       type: "staff_members"
+    values:
+      _options:
+        image_path:
+          width: 600
+          height: 600
+  -
+    scope:
+      path: ""
+      type: "phd_members"
     values:
       _options:
         image_path:

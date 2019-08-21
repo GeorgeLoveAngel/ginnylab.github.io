@@ -10,15 +10,16 @@
   link: /about/
   new_window: false
   highlight: false
+- name: Publications
+  link: /publications/
+  new_window: false
+  highlight: false
 - name: Contact
   link: /contact/
   new_window: false
   highlight: false
-- name: Login
-  link: /
-  new_window: true
-  highlight: false
-- name: Sign Up
-  link: /
-  new_window: true
-  highlight: true
+
+# - name: Sign Up
+#   link: /
+#   new_window: true
+#   highlight: true
