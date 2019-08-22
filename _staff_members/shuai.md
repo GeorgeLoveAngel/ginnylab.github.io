@@ -1,7 +1,7 @@
 ---
 name: Shuai Tang
 position: phd
-image_path: https://source.unsplash.com/collection/139386/602x602?a=.png
+image_path: https://shuaitang.github.io/images/shuai.jpg
 homepage: https://shuaitang.github.io/
 award: 
 ---
