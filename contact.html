@@ -29,133 +29,45 @@ map:
 </div>
 
 <div class="map" id="map"></div>
-
+<script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
 <script type="text/javascript">
+	var map = new ol.Map({
+	  target: 'map',
+	  layers: [
+		new ol.layer.Tile({
+		  source: new ol.source.OSM()
+		})
+	  ],
+	  view: new ol.View({
+		center: ol.proj.fromLonLat([-117.240250,32.880749]),
+		zoom: 10
+	  })
+	});
+	//Adding a marker on the map
+	var marker = new ol.Feature({
+	geometry: new ol.geom.Point(
+		ol.proj.fromLonLat([-117.240250,32.880749])
+	),  // Cordinates of New York's Town Hall
+	});
+	marker.setStyle(new ol.style.Style({
+        image: new ol.style.Icon(({
+            color: 'red',
+            crossOrigin: 'anonymous',
+            src: '/images/mark.png'
+        }))
+    }));
+	var vectorSource = new ol.source.Vector({
+	features: [marker]
+	});
+	var markerVectorLayer = new ol.layer.Vector({
+	source: vectorSource,
+	});
+	map.addLayer(markerVectorLayer);
+  </script>
+<!-- <script type="text/javascript">
 	window.mapData = {{ page.map | jsonify }};
 
 	function initMap() {
-		// var myOptions = {
-		// 	scrollwheel: false,
-		// 	draggable: false,
-		// 	panControl: false,
-		// 	disableDefaultUI: true,
-		// 	styles: [{
-		// 		"featureType": "all",
-		// 		"elementType": "labels.text.fill",
-		// 		"stylers": [{
-		// 			"saturation": 36
-		// 		}, {
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 40
-		// 		}]
-		// 	}, {
-		// 		"featureType": "all",
-		// 		"elementType": "labels.text.stroke",
-		// 		"stylers": [{
-		// 			"visibility": "on"
-		// 		}, {
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 16
-		// 		}]
-		// 	}, {
-		// 		"featureType": "all",
-		// 		"elementType": "labels.icon",
-		// 		"stylers": [{
-		// 			"visibility": "off"
-		// 		}]
-		// 	}, {
-		// 		"featureType": "administrative",
-		// 		"elementType": "geometry.fill",
-		// 		"stylers": [{
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 20
-		// 		}]
-		// 	}, {
-		// 		"featureType": "administrative",
-		// 		"elementType": "geometry.stroke",
-		// 		"stylers": [{
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 17
-		// 		}, {
-		// 			"weight": 1.2
-		// 		}]
-		// 	}, {
-		// 		"featureType": "landscape",
-		// 		"elementType": "geometry",
-		// 		"stylers": [{
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 20
-		// 		}]
-		// 	}, {
-		// 		"featureType": "poi",
-		// 		"elementType": "geometry",
-		// 		"stylers": [{
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 21
-		// 		}]
-		// 	}, {
-		// 		"featureType": "road.highway",
-		// 		"elementType": "geometry.fill",
-		// 		"stylers": [{
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 17
-		// 		}]
-		// 	}, {
-		// 		"featureType": "road.highway",
-		// 		"elementType": "geometry.stroke",
-		// 		"stylers": [{
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 29
-		// 		}, {
-		// 			"weight": 0.2
-		// 		}]
-		// 	}, {
-		// 		"featureType": "road.arterial",
-		// 		"elementType": "geometry",
-		// 		"stylers": [{
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 18
-		// 		}]
-		// 	}, {
-		// 		"featureType": "road.local",
-		// 		"elementType": "geometry",
-		// 		"stylers": [{
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 16
-		// 		}]
-		// 	}, {
-		// 		"featureType": "transit",
-		// 		"elementType": "geometry",
-		// 		"stylers": [{
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 19
-		// 		}]
-		// 	}, {
-		// 		"featureType": "water",
-		// 		"elementType": "geometry",
-		// 		"stylers": [{
-		// 			"color": "#000000"
-		// 		}, {
-		// 			"lightness": 17
-		// 		}]
-		// 	}],
-		// 	zoom: window.mapData.zoom,
-		// 	maxZoom: window.mapData.zoom,
-		// 	minZoom: window.mapData.zoom,
-		// 	center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
-		// 	mapTypeId: google.maps.MapTypeId.ROADMAP
-		// };
 		map = new google.maps.Map(document.getElementById("map"), {
 			zoom: window.mapData.zoom,
 			maxZoom: window.mapData.zoom,
@@ -172,5 +84,5 @@ map:
 			map.setCenter(myOptions.center);
 		});
 	}
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1t0l6rKws4hKcthMa-P0m2Pj7dUBYMxY&amp;callback=initMap"></script>
+</script> -->
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1t0l6rKws4hKcthMa-P0m2Pj7dUBYMxY&amp;callback=initMap"></script> -->
