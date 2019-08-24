@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/sales/2016/07/20/the-process-for-direct-sales/</loc>
-<lastmod>2016-07-20T00:00:00+00:00</lastmod>
+<loc>http://localhost:4000/research/2009/02/16/NFS/</loc>
+<lastmod>2009-02-16T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/sales/tips/2016/07/28/effective-upselling-techniques/</loc>
-<lastmod>2016-07-28T00:00:00+00:00</lastmod>
+<loc>http://localhost:4000/media/2011/02/20/ucsdtv/</loc>
+<lastmod>2011-02-20T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/sales/tips/2016/08/02/sales-effectiveness/</loc>
-<lastmod>2016-08-02T00:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/sales/2016/08/06/definition-of-sales/</loc>
-<lastmod>2016-08-06T00:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/marketing/2016/08/12/the-history-of-marketing/</loc>
-<lastmod>2016-08-12T00:00:00+00:00</lastmod>
+<loc>http://localhost:4000/research/2019/08/23/NFS/</loc>
+<lastmod>2019-08-23T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
@@ -45,12 +37,9 @@
 <loc>http://localhost:4000/publications/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/category/sales/</loc>
+<loc>http://localhost:4000/category/research/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/category/tips/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/category/marketing/</loc>
+<loc>http://localhost:4000/category/media/</loc>
 </url>
 </urlset>
