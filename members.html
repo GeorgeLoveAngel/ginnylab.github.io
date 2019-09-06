@@ -40,6 +40,30 @@ description: Staff
 	{% endfor %}
 </ul>
 
+<p  style="text-align: center;"> Undergraduate students</p>
+<ul class="staff">
+	{% for person in site.staff_members %}
+		{% if person.position == "undergraduate" %}
+		<li>
+			<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}" alt="{{ person.name }}"/></div>
+			<div class="name"><a target="_blank" href={{ person.homepage }}>{{ person.name }}</a></div>
+		</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+
+<p  style="text-align: center;"> Visiting students</p>
+<ul class="staff">
+	{% for person in site.staff_members %}
+		{% if person.position == "visiting" %}
+		<li>
+			<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}" alt="{{ person.name }}"/></div>
+			<div class="name"><a target="_blank" href={{ person.homepage }}>{{ person.name }}</a></div>
+		</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+
 <div class="contact-box">
 		<div class="contact-details">
 			<p>
