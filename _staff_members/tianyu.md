@@ -1,7 +1,7 @@
 ---
 name: Tianyu Ma
 position: undergraduate
-image_path: 
+image_path: https://source.unsplash.com/collection/139386/605x605?a=.png
 homepage: 
 award: 
 ---
